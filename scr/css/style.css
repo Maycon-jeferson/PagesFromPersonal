@@ -73,6 +73,7 @@ a{
   text-decoration: none;
   color: #fff;
   border-bottom: 1px solid #ec7c7c;
+  animation: textAnimation 6s ease-in-out forwards;
 }
 
 /* ======================================================= */
@@ -82,14 +83,17 @@ a{
   color: #fff;
   padding: 1rem;
   margin: 1rem;
+  z-index: 1;
 }
 
-.border-text{
-  background: none fixed;
+.text img{
+  display: flex;
+  margin: 0 auto;
+  max-width: 300px;
 }
 
 .container{
-  animation: textAnimation 8s ease-in-out forwards;
+  animation: textAnimationPages 6s ease-in-out forwards;
 }
 
 /* =============================================================== */
@@ -112,12 +116,24 @@ a{
   }
 }
 
-@keyframes textAnimation {
+@keyframes textAnimationPages {
   0% {
     opacity: 0;
   }
   30% {
-    opacity: 0.5;
+    opacity: 5.0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
