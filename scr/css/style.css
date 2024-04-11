@@ -1,0 +1,140 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #ec7c7c;
+}
+
+.rose-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ======================================= */
+
+.rose{
+  position: relative;
+  width: 350px;
+  height: 300px;
+  opacity: 1;
+  animation: bloom 6s ease-in-out forwards;
+}
+
+.petal {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform-origin: bottom;
+  opacity: 0;
+  animation: petal-fall 6s infinite alternate;
+}
+
+/* ========================================== */
+
+.p1{
+  transform: rotate(-20deg);
+  left: 30px;
+  top: 10px;
+}
+.p2{
+  transform: rotate(-70deg);
+  left: -5px;
+  top: 50px;
+}
+.p3{
+  transform: rotate(-90deg);
+  left: 0px;
+  top: 110px
+}
+
+.p4{
+  transform: rotate(20deg);
+  right: 30px;
+  top: 10px;
+}
+.p5{
+  transform: rotate(70deg);
+  right: -5px;
+  top: 50px;
+}
+.p6{
+  transform: rotate(90deg);
+  right: 0px;
+  top: 110px
+}
+
+/* =========================================== */
+
+a{
+  position: absolute;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #ec7c7c;
+}
+
+/* ======================================================= */
+
+.text{
+  font-size: 22px;
+  color: #fff;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.border-text{
+  background: none fixed;
+}
+
+.container{
+  animation: textAnimation 8s ease-in-out forwards;
+}
+
+/* =============================================================== */
+
+@keyframes bloom {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  30% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes petal-fall {
+  30% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-80px) rotate(0deg);
+    opacity:0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
